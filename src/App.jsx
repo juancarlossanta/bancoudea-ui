@@ -6,12 +6,16 @@ import TransactionsForAccount from "./components/TransactionsForAccount";
 function App() {
   return (
     <Router>
-      <nav>
-        <Link to="/">Clientes</Link>
-        <span> | </span>
-        <Link to="/transferencia">Transferencia</Link>
-        <span> | </span>
-        <Link to="/historial">Historial</Link>
+      <nav className="bg-institucional p-4 text-white flex gap-4">
+        <Link to="/" className="hover:underline">
+          Clientes
+        </Link>
+        <Link to="/transferencia" className="hover:underline">
+          Transferencia
+        </Link>
+        <Link to="/historial" className="hover:underline">
+          Historial
+        </Link>
       </nav>
       <Routes>
         <Route path="/" element={<CustomerList />} />
